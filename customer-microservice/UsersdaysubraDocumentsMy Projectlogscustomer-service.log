@@ -1,0 +1,646 @@
+2022-08-07 06:30:56.842  INFO [customer-service,,] 19836 --- [main] c.t.b.c.CustomerMicroserviceApplication  : Starting CustomerMicroserviceApplication using Java 17.0.3 on LIN77001086 with PID 19836 (C:\Users\daysubra\Documents\My Project\customer-microservice\target\classes started by daysubra in C:\Users\daysubra\Documents\My Project\customer-microservice)
+2022-08-07 06:30:56.860  INFO [customer-service,,] 19836 --- [main] c.t.b.c.CustomerMicroserviceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-07 06:31:00.548  INFO [customer-service,,] 19836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-07 06:31:00.549  INFO [customer-service,,] 19836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-08-07 06:31:00.828  INFO [customer-service,,] 19836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-07 06:31:02.800  INFO [customer-service,,] 19836 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-07 06:31:02.920  INFO [customer-service,,] 19836 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-07 06:31:03.280  INFO [customer-service,,] 19836 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-07 06:31:03.494  INFO [customer-service,,] 19836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-07 06:31:04.571 ERROR [customer-service,,] 19836 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.5.jar:42.3.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.telecom.b2b.customermicroservice.CustomerMicroserviceApplication.main(CustomerMicroserviceApplication.java:10) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.5.jar:42.3.5]
+	... 50 common frames omitted
+
+2022-08-07 06:31:04.574  WARN [customer-service,,] 19836 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.5.jar:42.3.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.telecom.b2b.customermicroservice.CustomerMicroserviceApplication.main(CustomerMicroserviceApplication.java:10) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.5.jar:42.3.5]
+	... 50 common frames omitted
+
+2022-08-07 06:31:04.603  INFO [customer-service,,] 19836 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-07 06:31:05.630  INFO [customer-service,,] 19836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-07 06:31:06.641 ERROR [customer-service,,] 19836 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.5.jar:42.3.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:104) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.telecom.b2b.customermicroservice.CustomerMicroserviceApplication.main(CustomerMicroserviceApplication.java:10) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.5.jar:42.3.5]
+	... 49 common frames omitted
+
+2022-08-07 06:31:06.643  WARN [customer-service,,] 19836 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2022-08-07 06:31:06.644 ERROR [customer-service,,] 19836 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2022-08-07 06:31:06.655 ERROR [customer-service,,] 19836 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2022-08-07 06:31:07.672  WARN [customer-service,,] 19836 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-07 06:31:07.680  INFO [customer-service,,] 19836 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-07 06:31:07.750 ERROR [customer-service,,] 19836 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.telecom.b2b.customermicroservice.CustomerMicroserviceApplication.main(CustomerMicroserviceApplication.java:10) ~[classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:104) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.5.jar:42.3.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.5.jar:42.3.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.5.jar:42.3.5]
+	... 49 common frames omitted
+
+2022-08-07 06:31:36.335  INFO [customer-service,,] 18712 --- [main] c.t.b.c.CustomerMicroserviceApplication  : Starting CustomerMicroserviceApplication using Java 17.0.3 on LIN77001086 with PID 18712 (C:\Users\daysubra\Documents\My Project\customer-microservice\target\classes started by daysubra in C:\Users\daysubra\Documents\My Project\customer-microservice)
+2022-08-07 06:31:36.359  INFO [customer-service,,] 18712 --- [main] c.t.b.c.CustomerMicroserviceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-07 06:31:41.364  INFO [customer-service,,] 18712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-07 06:31:41.366  INFO [customer-service,,] 18712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-08-07 06:31:41.914  INFO [customer-service,,] 18712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-07 06:31:44.949  INFO [customer-service,,] 18712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-07 06:31:45.143  INFO [customer-service,,] 18712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-07 06:31:45.714  INFO [customer-service,,] 18712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-07 06:31:46.059  INFO [customer-service,,] 18712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-07 06:31:46.365  INFO [customer-service,,] 18712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-07 06:31:46.412  INFO [customer-service,,] 18712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-07 06:31:47.851 DEBUG [customer-service,,] 18712 --- [main] org.hibernate.SQL                        : create table customer (customer_id int8 not null, customer_code varchar(255), customer_createdate timestamp, customer_name varchar(255), customer_regdate varchar(255), customer_status varchar(255), customer_updatedate timestamp, primary key (customer_id))
+2022-08-07 06:31:47.911 DEBUG [customer-service,,] 18712 --- [main] org.hibernate.SQL                        : create table customer_address (customer_address_id int8 not null, city varchar(255), pin_code int8, street varchar(255), customer_id int8, primary key (customer_address_id))
+2022-08-07 06:31:47.930 DEBUG [customer-service,,] 18712 --- [main] org.hibernate.SQL                        : create sequence customer_sequence start 1 increment 1
+2022-08-07 06:31:47.939 DEBUG [customer-service,,] 18712 --- [main] org.hibernate.SQL                        : alter table customer_address add constraint FKr9ofa0ydsgbaqmt9leb3v5eii foreign key (customer_id) references customer
+2022-08-07 06:31:47.956  INFO [customer-service,,] 18712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-07 06:31:51.206  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-07 06:31:51.216  INFO [customer-service,,] 18712 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:31:51.276  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-07 06:31:51.277  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-07 06:31:51.278  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-07 06:31:51.279  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-07 06:31:51.279  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-07 06:31:51.279  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-07 06:31:51.280  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-07 06:31:51.890  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-07 06:31:51.901  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-07 06:31:51.911  INFO [customer-service,,] 18712 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-07 06:31:51.971  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1659846711969 with initial instances count: 1
+2022-08-07 06:31:51.999  INFO [customer-service,,] 18712 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1659846711999, current=UP, previous=STARTING]
+2022-08-07 06:31:52.003  INFO [customer-service,,] 18712 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-SERVICE/host.docker.internal:customer-service:7012: registering service...
+2022-08-07 06:31:52.103  INFO [customer-service,,] 18712 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-SERVICE/host.docker.internal:customer-service:7012 - registration status: 204
+2022-08-07 06:31:52.486  INFO [customer-service,,] 18712 --- [main] c.t.b.c.CustomerMicroserviceApplication  : Started CustomerMicroserviceApplication in 17.485 seconds (JVM running for 18.613)
+2022-08-07 06:32:16.401  INFO [customer-service,,] 22776 --- [main] c.t.b.c.CustomerMicroserviceApplication  : Starting CustomerMicroserviceApplication using Java 17.0.3 on LIN77001086 with PID 22776 (C:\Users\daysubra\Documents\My Project\customer-microservice\target\classes started by daysubra in C:\Users\daysubra\Documents\My Project\customer-microservice)
+2022-08-07 06:32:16.426  INFO [customer-service,,] 22776 --- [main] c.t.b.c.CustomerMicroserviceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-07 06:32:21.912  INFO [customer-service,,] 22776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-07 06:32:21.914  INFO [customer-service,,] 22776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-08-07 06:32:22.333  INFO [customer-service,,] 22776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-07 06:32:25.944  INFO [customer-service,,] 22776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-07 06:32:26.081  INFO [customer-service,,] 22776 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-07 06:32:26.499  INFO [customer-service,,] 22776 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-07 06:32:26.752  INFO [customer-service,,] 22776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-07 06:32:26.976  INFO [customer-service,,] 22776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-07 06:32:27.024  INFO [customer-service,,] 22776 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-07 06:32:28.663  INFO [customer-service,,] 22776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-07 06:32:32.591  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-07 06:32:32.607  INFO [customer-service,,] 22776 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:32:32.690  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-07 06:32:32.690  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-07 06:32:32.691  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-07 06:32:32.691  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-07 06:32:32.692  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-07 06:32:32.692  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-07 06:32:32.693  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-07 06:32:33.430  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-07 06:32:33.441  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-07 06:32:33.453  INFO [customer-service,,] 22776 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-07 06:32:33.466  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1659846753464 with initial instances count: 2
+2022-08-07 06:32:33.480  INFO [customer-service,,] 22776 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1659846753480, current=UP, previous=STARTING]
+2022-08-07 06:32:33.486  INFO [customer-service,,] 22776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-SERVICE/host.docker.internal:customer-service:7012: registering service...
+2022-08-07 06:32:33.616  INFO [customer-service,,] 22776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-SERVICE/host.docker.internal:customer-service:7012 - registration status: 204
+2022-08-07 06:32:34.169  INFO [customer-service,,] 22776 --- [main] c.t.b.c.CustomerMicroserviceApplication  : Started CustomerMicroserviceApplication in 19.242 seconds (JVM running for 20.74)
+2022-08-07 06:35:48.793  INFO [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-07 06:35:48.998 DEBUG [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] org.hibernate.SQL                        : select nextval ('customer_sequence')
+2022-08-07 06:35:49.075 DEBUG [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] org.hibernate.SQL                        : select nextval ('hibernate_sequence')
+2022-08-07 06:35:49.121 DEBUG [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] org.hibernate.SQL                        : insert into customer (customer_code, customer_createdate, customer_name, customer_regdate, customer_status, customer_updatedate, customer_id) values (?, ?, ?, ?, ?, ?, ?)
+2022-08-07 06:35:49.130 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [SWEDEN AB]
+2022-08-07 06:35:49.133 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Sun Aug 07 06:35:48 CEST 2022]
+2022-08-07 06:35:49.136 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [TELECOM SWEDEN AB]
+2022-08-07 06:35:49.139 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [null]
+2022-08-07 06:35:49.140 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [ACTIVE]
+2022-08-07 06:35:49.141 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [TIMESTAMP] - [null]
+2022-08-07 06:35:49.143 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2022-08-07 06:35:49.176 DEBUG [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] org.hibernate.SQL                        : insert into customer_address (city, customer_id, pin_code, street, customer_address_id) values (?, ?, ?, ?, ?)
+2022-08-07 06:35:49.177 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Stockholm]
+2022-08-07 06:35:49.177 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [1]
+2022-08-07 06:35:49.178 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [1307]
+2022-08-07 06:35:49.178 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [TRUBADURVAGEN 18]
+2022-08-07 06:35:49.178 TRACE [customer-service,5512146a6c1f2740,69b8b15319a1c9dc] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2022-08-07 06:35:50.307  WARN [customer-service,,] 22776 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-07 06:35:50.321  WARN [customer-service,,] 22776 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.3.jar:3.1.3]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.20.jar:5.3.20]
+	... 11 common frames omitted
+
+2022-08-07 06:37:32.687  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:42:32.702  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:47:32.724  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:47:45.449 DEBUG [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] org.hibernate.SQL                        : select customer0_.customer_id as customer1_0_0_, customer0_.customer_code as customer2_0_0_, customer0_.customer_createdate as customer3_0_0_, customer0_.customer_name as customer4_0_0_, customer0_.customer_regdate as customer5_0_0_, customer0_.customer_status as customer6_0_0_, customer0_.customer_updatedate as customer7_0_0_, customerad1_.customer_address_id as customer1_1_1_, customerad1_.city as city2_1_1_, customerad1_.customer_id as customer5_1_1_, customerad1_.pin_code as pin_code3_1_1_, customerad1_.street as street4_1_1_ from customer customer0_ left outer join customer_address customerad1_ on customer0_.customer_id=customerad1_.customer_id where customer0_.customer_id=?
+2022-08-07 06:47:45.469 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2022-08-07 06:47:45.570 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer1_1_1_] : [BIGINT]) - [1]
+2022-08-07 06:47:45.600 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer2_0_0_] : [VARCHAR]) - [SWEDEN AB]
+2022-08-07 06:47:45.616 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer3_0_0_] : [TIMESTAMP]) - [2022-08-07 06:35:48.921]
+2022-08-07 06:47:45.617 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer4_0_0_] : [VARCHAR]) - [TELECOM SWEDEN AB]
+2022-08-07 06:47:45.620 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_0_0_] : [VARCHAR]) - [null]
+2022-08-07 06:47:45.620 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer6_0_0_] : [VARCHAR]) - [ACTIVE]
+2022-08-07 06:47:45.620 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer7_0_0_] : [TIMESTAMP]) - [null]
+2022-08-07 06:47:45.631 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([city2_1_1_] : [VARCHAR]) - [Stockholm]
+2022-08-07 06:47:45.633 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_1_1_] : [BIGINT]) - [1]
+2022-08-07 06:47:45.635 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pin_code3_1_1_] : [BIGINT]) - [1307]
+2022-08-07 06:47:45.635 TRACE [customer-service,0517d75d78bd7e5b,0517d75d78bd7e5b] 22776 --- [http-nio-7012-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([street4_1_1_] : [VARCHAR]) - [TRUBADURVAGEN 18]
+2022-08-07 06:52:32.767  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 06:56:11.183 DEBUG [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] org.hibernate.SQL                        : select customer0_.customer_id as customer1_0_0_, customer0_.customer_code as customer2_0_0_, customer0_.customer_createdate as customer3_0_0_, customer0_.customer_name as customer4_0_0_, customer0_.customer_regdate as customer5_0_0_, customer0_.customer_status as customer6_0_0_, customer0_.customer_updatedate as customer7_0_0_, customerad1_.customer_address_id as customer1_1_1_, customerad1_.city as city2_1_1_, customerad1_.customer_id as customer5_1_1_, customerad1_.pin_code as pin_code3_1_1_, customerad1_.street as street4_1_1_ from customer customer0_ left outer join customer_address customerad1_ on customer0_.customer_id=customerad1_.customer_id where customer0_.customer_id=?
+2022-08-07 06:56:11.210 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2022-08-07 06:56:11.272 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer1_1_1_] : [BIGINT]) - [1]
+2022-08-07 06:56:11.281 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer2_0_0_] : [VARCHAR]) - [SWEDEN AB]
+2022-08-07 06:56:11.290 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer3_0_0_] : [TIMESTAMP]) - [2022-08-07 06:35:48.921]
+2022-08-07 06:56:11.291 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer4_0_0_] : [VARCHAR]) - [TELECOM SWEDEN AB]
+2022-08-07 06:56:11.292 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_0_0_] : [VARCHAR]) - [null]
+2022-08-07 06:56:11.295 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer6_0_0_] : [VARCHAR]) - [ACTIVE]
+2022-08-07 06:56:11.296 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer7_0_0_] : [TIMESTAMP]) - [null]
+2022-08-07 06:56:11.301 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([city2_1_1_] : [VARCHAR]) - [Stockholm]
+2022-08-07 06:56:11.303 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_1_1_] : [BIGINT]) - [1]
+2022-08-07 06:56:11.307 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pin_code3_1_1_] : [BIGINT]) - [1307]
+2022-08-07 06:56:11.307 TRACE [customer-service,c8c2ef83d5201a7d,c8c2ef83d5201a7d] 22776 --- [http-nio-7012-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([street4_1_1_] : [VARCHAR]) - [TRUBADURVAGEN 18]
+2022-08-07 06:57:32.872  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:02:32.893  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:07:32.922  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:12:32.944  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:17:32.963  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:22:33.019  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:27:33.023  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:32:33.062  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:37:33.097  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:42:33.109  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:47:33.109  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:52:33.119  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 07:57:33.134  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:02:33.160  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:07:33.178  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:12:33.227  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:17:33.254  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:22:33.270  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:27:33.310  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:32:33.348  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:37:33.353  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:40:32.068 DEBUG [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] org.hibernate.SQL                        : select customer0_.customer_id as customer1_0_0_, customer0_.customer_code as customer2_0_0_, customer0_.customer_createdate as customer3_0_0_, customer0_.customer_name as customer4_0_0_, customer0_.customer_regdate as customer5_0_0_, customer0_.customer_status as customer6_0_0_, customer0_.customer_updatedate as customer7_0_0_, customerad1_.customer_address_id as customer1_1_1_, customerad1_.city as city2_1_1_, customerad1_.customer_id as customer5_1_1_, customerad1_.pin_code as pin_code3_1_1_, customerad1_.street as street4_1_1_ from customer customer0_ left outer join customer_address customerad1_ on customer0_.customer_id=customerad1_.customer_id where customer0_.customer_id=?
+2022-08-07 08:40:32.081 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2022-08-07 08:40:32.178 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer1_1_1_] : [BIGINT]) - [1]
+2022-08-07 08:40:32.183 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer2_0_0_] : [VARCHAR]) - [SWEDEN AB]
+2022-08-07 08:40:32.188 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer3_0_0_] : [TIMESTAMP]) - [2022-08-07 06:35:48.921]
+2022-08-07 08:40:32.189 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer4_0_0_] : [VARCHAR]) - [TELECOM SWEDEN AB]
+2022-08-07 08:40:32.189 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_0_0_] : [VARCHAR]) - [null]
+2022-08-07 08:40:32.189 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer6_0_0_] : [VARCHAR]) - [ACTIVE]
+2022-08-07 08:40:32.189 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer7_0_0_] : [TIMESTAMP]) - [null]
+2022-08-07 08:40:32.191 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([city2_1_1_] : [VARCHAR]) - [Stockholm]
+2022-08-07 08:40:32.192 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_1_1_] : [BIGINT]) - [1]
+2022-08-07 08:40:32.193 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pin_code3_1_1_] : [BIGINT]) - [1307]
+2022-08-07 08:40:32.194 TRACE [customer-service,0cb74b21c37986e8,0cb74b21c37986e8] 22776 --- [http-nio-7012-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([street4_1_1_] : [VARCHAR]) - [TRUBADURVAGEN 18]
+2022-08-07 08:42:33.391  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:47:33.410  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:52:33.457  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:57:33.506  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 08:57:59.186 DEBUG [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] org.hibernate.SQL                        : select customer0_.customer_id as customer1_0_0_, customer0_.customer_code as customer2_0_0_, customer0_.customer_createdate as customer3_0_0_, customer0_.customer_name as customer4_0_0_, customer0_.customer_regdate as customer5_0_0_, customer0_.customer_status as customer6_0_0_, customer0_.customer_updatedate as customer7_0_0_, customerad1_.customer_address_id as customer1_1_1_, customerad1_.city as city2_1_1_, customerad1_.customer_id as customer5_1_1_, customerad1_.pin_code as pin_code3_1_1_, customerad1_.street as street4_1_1_ from customer customer0_ left outer join customer_address customerad1_ on customer0_.customer_id=customerad1_.customer_id where customer0_.customer_id=?
+2022-08-07 08:57:59.200 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2022-08-07 08:57:59.271 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer1_1_1_] : [BIGINT]) - [1]
+2022-08-07 08:57:59.277 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer2_0_0_] : [VARCHAR]) - [SWEDEN AB]
+2022-08-07 08:57:59.290 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer3_0_0_] : [TIMESTAMP]) - [2022-08-07 06:35:48.921]
+2022-08-07 08:57:59.291 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer4_0_0_] : [VARCHAR]) - [TELECOM SWEDEN AB]
+2022-08-07 08:57:59.291 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_0_0_] : [VARCHAR]) - [null]
+2022-08-07 08:57:59.291 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer6_0_0_] : [VARCHAR]) - [ACTIVE]
+2022-08-07 08:57:59.292 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer7_0_0_] : [TIMESTAMP]) - [null]
+2022-08-07 08:57:59.298 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([city2_1_1_] : [VARCHAR]) - [Stockholm]
+2022-08-07 08:57:59.299 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_1_1_] : [BIGINT]) - [1]
+2022-08-07 08:57:59.300 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pin_code3_1_1_] : [BIGINT]) - [1307]
+2022-08-07 08:57:59.301 TRACE [customer-service,c28e0789905fa47e,c28e0789905fa47e] 22776 --- [http-nio-7012-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([street4_1_1_] : [VARCHAR]) - [TRUBADURVAGEN 18]
+2022-08-07 09:02:33.551  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:07:33.567  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:12:33.578  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:17:33.602  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:22:33.606  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:27:33.616  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:32:33.627  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:37:33.644  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:42:33.644  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:47:25.960 DEBUG [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] org.hibernate.SQL                        : select customer0_.customer_id as customer1_0_0_, customer0_.customer_code as customer2_0_0_, customer0_.customer_createdate as customer3_0_0_, customer0_.customer_name as customer4_0_0_, customer0_.customer_regdate as customer5_0_0_, customer0_.customer_status as customer6_0_0_, customer0_.customer_updatedate as customer7_0_0_, customerad1_.customer_address_id as customer1_1_1_, customerad1_.city as city2_1_1_, customerad1_.customer_id as customer5_1_1_, customerad1_.pin_code as pin_code3_1_1_, customerad1_.street as street4_1_1_ from customer customer0_ left outer join customer_address customerad1_ on customer0_.customer_id=customerad1_.customer_id where customer0_.customer_id=?
+2022-08-07 09:47:25.998 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2022-08-07 09:47:26.090 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer1_1_1_] : [BIGINT]) - [1]
+2022-08-07 09:47:26.098 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer2_0_0_] : [VARCHAR]) - [SWEDEN AB]
+2022-08-07 09:47:26.109 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer3_0_0_] : [TIMESTAMP]) - [2022-08-07 06:35:48.921]
+2022-08-07 09:47:26.110 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer4_0_0_] : [VARCHAR]) - [TELECOM SWEDEN AB]
+2022-08-07 09:47:26.111 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_0_0_] : [VARCHAR]) - [null]
+2022-08-07 09:47:26.111 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer6_0_0_] : [VARCHAR]) - [ACTIVE]
+2022-08-07 09:47:26.111 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer7_0_0_] : [TIMESTAMP]) - [null]
+2022-08-07 09:47:26.114 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([city2_1_1_] : [VARCHAR]) - [Stockholm]
+2022-08-07 09:47:26.115 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([customer5_1_1_] : [BIGINT]) - [1]
+2022-08-07 09:47:26.115 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pin_code3_1_1_] : [BIGINT]) - [1307]
+2022-08-07 09:47:26.116 TRACE [customer-service,900729ef7dded457,900729ef7dded457] 22776 --- [http-nio-7012-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([street4_1_1_] : [VARCHAR]) - [TRUBADURVAGEN 18]
+2022-08-07 09:47:33.655  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:52:33.667  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 09:57:33.718  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:02:33.758  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:07:33.795  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:12:33.810  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:17:33.812  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:22:33.817  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:27:33.821  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:32:33.823  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:37:33.825  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:42:33.838  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:47:33.854  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:52:33.849  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 10:57:33.861  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:02:33.887  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:07:33.931  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:12:33.943  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:17:33.948  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:22:33.960  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:27:33.977  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:32:33.987  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:37:33.987  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:42:34.002  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:47:34.055  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:52:34.101  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 11:57:34.134  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:02:34.151  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:07:34.186  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:12:34.249  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:17:34.297  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:22:34.355  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:27:34.387  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:32:34.418  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:37:34.430  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:42:34.492  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:47:34.547  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:52:34.610  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 12:57:34.668  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:02:34.727  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:07:34.796  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:12:34.812  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:17:34.820  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:22:34.824  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:27:34.830  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:32:34.835  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:37:34.845  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:42:34.855  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:47:34.879  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:52:34.884  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 13:57:34.884  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:02:34.905  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:07:34.918  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:12:34.928  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:17:34.915  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:22:34.915  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:27:34.907  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:32:34.900  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:37:34.906  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:42:34.917  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:47:34.920  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:52:34.927  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 14:57:34.931  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:02:34.935  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:07:34.933  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:12:34.952  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:17:34.978  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:22:34.983  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:27:34.974  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:32:34.967  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:37:34.958  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:42:34.980  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:47:34.977  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:52:34.980  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 15:57:34.979  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:02:34.988  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:07:35.001  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:12:35.019  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:17:35.026  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:22:35.034  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:27:35.037  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:32:35.036  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:37:35.022  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:42:35.024  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:47:35.025  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:52:35.032  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 16:57:35.037  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:02:35.031  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:07:35.040  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:12:35.049  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:17:35.049  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:22:35.047  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:27:35.044  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:32:35.050  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:37:35.058  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:42:35.066  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:47:35.079  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:52:35.085  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 17:57:35.086  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:02:35.095  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:07:35.098  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:12:35.113  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:17:35.124  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:22:35.129  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:27:35.143  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:32:35.147  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:37:35.160  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:42:35.165  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:47:35.159  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:52:35.131  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 18:57:35.117  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:02:35.120  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:07:35.112  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:12:35.105  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:17:35.100  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:22:35.106  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:27:35.145  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:32:35.189  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:37:35.223  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:42:35.226  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:47:35.224  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:52:35.231  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 19:57:35.238  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:02:35.240  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:07:35.287  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:12:35.287  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:17:35.286  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:22:35.327  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:27:35.332  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:32:35.334  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-07 20:37:35.347  INFO [customer-service,,] 22776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
